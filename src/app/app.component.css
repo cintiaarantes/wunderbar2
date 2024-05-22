@@ -7,8 +7,12 @@
 app-course-card {
   align-items: center;
   margin-top: 1rem;
+  display: flex;
+  background-color: blue;
 }
-
+app-footer{
+  margin: 0;
+}
 :host {
   display: flex;
   flex-direction: column;
