@@ -8,14 +8,14 @@
         <span class="fas fa-shopping-cart"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header" style="display: flex; flex-direction: column">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="margin-left: 5px">Shopping Cart</h5>
-          <ul>
-            <li *ngFor="let item of course">{{ item.course.name }} - Qty: {{ item.quantity }}
-              <button (click)="incrementQuantity(item.course.id)" class="botoes">+</button> <button (click)="removeItem(item.course.id)" class="botoes">-</button>
+        <div class="offcanvas-header m-3" style="display: flex; flex-direction: column">
+          <h5 class="offcanvas-title  fs-3" id="offcanvasNavbarLabel">Shopping Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <ul class="w-100">
+            <li class="d-flex justify-content-around" *ngFor="let item of course"><span class="w-50">{{ item.course.name }} - Qty: {{ item.quantity }}</span>
+              <button (click)="incrementQuantity(item.course.id)" class="botoes me-3">+</button> <button (click)="removeItem(item.course.id)" class="botoes">-</button>
             </li>
           </ul>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="margin-right: 1rem"></button>
         </div>
       </div>
     </div>

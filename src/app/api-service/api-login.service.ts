@@ -8,7 +8,7 @@ import { IUser } from '../models/user';
 })
 export class ApiLoginService {
 
-  API_Url = 'https://crudcrud.com/api/0740b4508270448d9fd93fd8259005c1/users';
+  API_Url = 'https://crudcrud.com/api/02ccc65edb634ec294cf6ae902f60814/users';
   userList: IUser[] = [];
   constructor(private http: HttpClient) {
     this.getAllUsers();
